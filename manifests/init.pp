@@ -1,8 +1,10 @@
-class bind {
+class bind (
+  $ensure = 'latest'
+){
   $required = $::operatingsystem ? {
     /(?i-mx:centos|fedora|redhat|scientific)/ => 'bind'
   }
   
-  package { $required: ensure  => latest }
+  package { $required: ensure  => $ensure }
   
 }

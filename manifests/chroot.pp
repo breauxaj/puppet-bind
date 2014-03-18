@@ -1,4 +1,6 @@
-class bind::chroot {
+class bind::chroot (
+  $ensure = 'latest'
+){
   $required = $::operatingsystem ? {
     /(?i-mx:centos|fedora|redhat|scientific)/ => [ 'bind-chroot' ],
   }
@@ -8,7 +10,7 @@ class bind::chroot {
   }
 
   package { $required:
-    ensure  => latest,
+    ensure  => $ensure,
     require => Package[$depends],
   }
 

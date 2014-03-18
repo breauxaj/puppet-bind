@@ -1,4 +1,6 @@
-class bind::devel {
+class bind::devel (
+  $ensure = 'latest'
+){
   $required = $::operatingsystem ? {
     /(?i-mx:centos|fedora|redhat|scientific)/ => [ 'bind-devel' ],
   }
@@ -8,7 +10,7 @@ class bind::devel {
   }
 
   package { $required:
-    ensure  => latest,
+    ensure  => $ensure,
     require => Package[$depends],
   }
 
