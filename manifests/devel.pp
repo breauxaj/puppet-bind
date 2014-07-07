@@ -1,3 +1,32 @@
+# Class: bind::devel
+#
+# This class installs Bind name server devel packages
+#
+# Parameters:
+#
+#  ensure: (default latest)
+#    Determine the state of the balance package
+#
+# Actions:
+#   - Install Bind devel package
+#   - Install Bind packages as dependency
+#
+# Requires:
+#
+# Sample Usage:
+#
+#  For a standard installation, use:
+#
+#    class { 'bind::devel':
+#      ensure => 'latest'
+#    }
+#
+#  To remove the installation, use:
+#
+#    class { 'bind::devel':
+#      ensure => 'absent'
+#    }
+#
 class bind::devel (
   $ensure = 'latest'
 ){
