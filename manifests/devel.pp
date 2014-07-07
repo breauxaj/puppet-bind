@@ -1,6 +1,6 @@
 # Class: bind::devel
 #
-# This class installs Bind name server devel packages
+# This class installs Bind name server devel package
 #
 # Parameters:
 #
