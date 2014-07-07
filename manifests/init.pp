@@ -5,7 +5,7 @@
 # Parameters:
 #
 #  ensure: (default latest)
-#    Determine the state of the balance package
+#    Determine the state of the bind package
 #
 # Actions:
 #   - Install Bind
